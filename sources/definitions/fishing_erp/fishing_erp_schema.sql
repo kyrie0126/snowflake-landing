@@ -1,0 +1,1 @@
+define schema {{ database }}.{{ schema_erp_fishing }};
