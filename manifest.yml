@@ -1,0 +1,34 @@
+manifest_version: 2
+
+type: DCM_PROJECT
+
+default_target: DEV
+
+targets:
+  DEV:
+    account_identifier: DGGGORW-ISB25540
+    project_name: dev_landing.admin.landing_dcm
+    project_owner: dev_dcm_landing
+    templating_config: DEV_TEMPLATING
+  TEST:
+    account_identifier: DGGGORW-ISB25540
+    project_name: test_landing.admin.landing_dcm
+    project_owner: test_dcm_landing
+    templating_config: TEST_TEMPLATING
+  PROD:
+    account_identifier: DGGGORW-ISB25540
+    project_name: prod_landing.admin.landing_dcm
+    project_owner: prod_dcm_landing
+    templating_config: PROD_TEMPLATING
+
+templating:
+  configurations:
+    DEV_TEMPLATING:
+      database: DEV_LANDING
+      schema_erp_fishing: ERP_FISHING
+    TEST_TEMPLATING:
+      database: TEST_LANDING
+      schema_erp_fishing: ERP_FISHING
+    PROD_TEMPLATING:
+      database: PROD_LANDING
+      schema_erp_fishing: ERP_FISHING
